@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice d'IMC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Calculatrice d'IMC</h1>
+            <div class="dark-mode-container">
+                <span class="dark-mode-label">Mode Nuit</span>
+                <label class="dark-mode-toggle" aria-label="Basculer entre mode jour et mode nuit">
+                    <input type="checkbox" id="dark-mode-toggle">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+        <form id="bmi-form">
+            <div class="input-group">
+                <label for="weight">Poids (kg):</label>
+                <input type="number" id="weight" step="0.1" required>
+            </div>
+            <div class="input-group">
+                <label for="height">Taille (cm):</label>
+                <input type="number" id="height" step="0.1" required>
+            </div>
+            <button type="submit">Calculer IMC</button>
+            <button type="button" id="reset-btn" class="secondary">Réinitialiser</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
